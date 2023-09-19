@@ -12,6 +12,7 @@
 // export default App;
 
 import Nav from "./components/Nav";
+import Contact from "./sections/Contact";
 import CustomerReviews from "./sections/CustomerReviews";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
@@ -48,6 +49,9 @@ function App() {
     </section>
     <section className="padding-x sm:py-32 py-16 w-full">
       <Subscirbe/>
+    </section>
+    <section className="padding-x sm:py-32 py-16 w-full lg:hidden">
+      <Contact/>
     </section>
     <section className="bg-black padding-x padding-t pb-8">
       <Footer/>
