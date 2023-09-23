@@ -12,7 +12,7 @@ const Nav = () => {
           width={130}
           height={29}/>
         </a>
-        <ul className='flex-1 flex justify-center
+        <ul className='flex-1 flex justify-end
          items-center gap-16 max-lg:hidden'>
           {navLinks.map((items)=>(
             <li key={items.label}>
@@ -26,7 +26,7 @@ const Nav = () => {
             </li>
           ))}
         </ul>
-        <div className='hidden max-lg:block'>
+        <div className='hidden max-lg:block cursor-pointer'>
           <img
           alt='hamburger'
           src={hamburger}
