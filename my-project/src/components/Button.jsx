@@ -1,5 +1,3 @@
-
-
 const Button = ({label,iconURL}) => {
   return (
     <button className="flex justify-center items-center gap-2
@@ -13,4 +11,4 @@ const Button = ({label,iconURL}) => {
   )
 }
 
-export default Button
+export default Button;

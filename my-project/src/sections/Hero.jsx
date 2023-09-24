@@ -1,17 +1,17 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { arrowRight } from "../assets/icons";
 import { bigShoe1 } from "../assets/images";
 import Button from "../components/Button";
-import {  statistics } from "../constants";
-// import ShoeCard from "../components/ShowCard";
+import { shoes, statistics } from "../constants";
+import ShoeCard from "../components/ShoeCard";
 
 const Hero = () => {
-  // const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
   return (
     <section
       id="home"
       className="w-full flex xl:flex-row flex-col justify-center min-h-screen 
-    gap-10 max-container xl:py-8"
+    gap-10 max-container "
     >
       <div
         className="relative xl:2/5 flex flex-col justify-center items-start 
@@ -45,29 +45,30 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className='relative flex-3 flex justify-center items-center xl:min-h-screen  max-xl:p-40 bg-primary bg-hero bg-cover bg-center'>
+      <div className='relative flex-2 flex justify-center items-center xl:min-h-screen  max-xl:p-10 bg-primary bg-hero bg-cover bg-center'>
         <img
-          src={bigShoe1}
+          src={bigShoeImg}
           alt='shoe colletion'
           width={610}
-          height={502}
-          className='object-contain relative z-1 xl:p-15'
+          height={500}
+          className='object-contain relative z-1 xl:p-10'
           />
-        </div>
-        {/* <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
-          {shoes.map((image, index) => (
-            <div key={index}>
+        <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
+          {shoes.map((image) => (
+            <div key={image}>
               <ShoeCard
-                index={index}
+                index={image}
                 imgURL={image}
                 changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
                 bigShoeImg={bigShoeImg}
               />
             </div>
           ))}
-        </div> */}
+        </div>
+        </div>
     </section>
   );
 };
 
 export default Hero;
+
